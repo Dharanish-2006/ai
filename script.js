@@ -17,7 +17,7 @@ createServer((req,res) => {
 	})
 
 	for await (const chunk of completion) {
-		// res.write(chunk.choices[0]?.delta?.content || '')
+		res.write(chunk.choices[0]?.delta?.content || '')
 	}
 
 	}
